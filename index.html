@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> 
+    <link rel="preconnect" href="https://github.githubassets.com">
+<link rel="dns-prefetch" href="https://github.githubassets.com">
+    <title>Приглашение на ДР</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: clip;
+    position: relative;
+}
+
+.mobile-only {
+    overflow-x: clip;
+}
+
+        :root {
+            --vh: 1vh;
+        }
+
+        @media (min-width: 769px) {
+            .mobile-only {
+                display: none !important;
+            }
+            .pc-block {
+                display: flex !important;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #ECE3DC;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                font-family: sans-serif;
+                padding: 20px;
+                z-index: 9999;
+            }
+            body {
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pc-block {
+                display: none !important;
+            }
+            .mobile-only {
+                display: block;
+            }
+            body {
+                overflow-x: hidden;
+                background: #ECE3DC;
+            }
+
+            .mobile-only {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh; /* вся высота экрана */
+}
+
+.mobile-only > section:last-of-type {
+    flex: 1; /* эта секция (six) займёт всё свободное место */
+}
+
+footer {
+    margin-top: auto; /* прижимает футер к низу */
+}
+        }
+
+        .pc-block {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 24px;
+            color: #833C40;
+        }
+        .pc-block span {
+            font-size: 48px;
+        }
+
+        .mobile-only {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ECE3DC;
+        }
+
+        section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        section img {
+            display: block;
+            position: relative;
+        }
+
+        /* ========== СИСТЕМА УПРАВЛЕНИЯ КАРТИНКАМИ ========== */
+        /* ========== СИСТЕМА УПРАВЛЕНИЯ КАРТИНКАМИ ========== */
+/* ЭКРАН 1 */
+.img-1-1 {
+    width: 130%;
+    position: relative;
+    top: -90px;
+    left: 90px;
+}
+.img-1-2 {
+    width: 60%;
+    position: relative;
+    top: -120px;
+    left: 60px;
+}
+
+/* ЭКРАН 2 */
+.img-2-1 {
+    width: 60%;
+    position: relative;
+    top: 40px;
+    left: -50px;
+}
+.img-2-2 {
+    width: 53%;
+    position: relative;
+    top: 45px;
+    left: -45px;
+}
+.img-2-3 {
+    width: 65%;
+    position: relative;
+    top: 120px;
+    left: 40px;
+}
+.img-2-4 {
+    width: 100%;
+    position: relative;
+    top: 101px;
+    left: 0px;
+}
+
+/* ЭКРАН 3 */
+.img-3-1 {
+    width: 85%;
+    position: relative;
+    top: 250px;
+    left: 0px;
+}
+.img-3-3 {
+    width: 70%;
+    position: relative;
+    top: 400px;
+    left: 0px;
+    z-index: 10;
+}
+.img-3-4 {
+    width: 160%;
+    position: relative;
+    top: 150px;
+    left: -170px;
+    z-index: 5;
+}
+
+/* ЭКРАН 4 */
+.img-4-1 {
+    width: 80%;
+    position: relative;
+    top: 100px;
+    left: -30px;
+}
+.img-4-2 {
+    width: 50%;
+    position: relative;
+    top: 110px;
+    left: -70px;
+}
+.img-4-4 {
+    width: 60%;
+    position: relative;
+    top: -85px;
+    left: 172px;
+}
+
+/* ЭКРАН 5 */
+.img-5-1 {
+    width: 85%;
+    position: relative;
+    top: -40px;
+    left: 0px;
+}
+
+/* ЭКРАН 6 */
+.img-6-1 {
+    width: 73%;
+    position: relative;
+    top: 150px;
+    left: 40px;
+    z-index: 10;
+}
+.img-6-2 {
+    width: 40%;
+    position: relative;
+    top: 6px;
+    left: -130px;
+    z-index: 5;
+}
+
+        /* КНОПКА ОТКРЫТЬ КАРТУ */
+        .map-button {
+            background: #833C40;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 17px;
+            font-size: 14px;
+            font-family: 'Lora', serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background 0.2s;
+            width: 50%;
+            display: inline-block;
+            margin: 20px auto;
+            position: relative;
+            top: 130px;
+            left: -70px;
+            margin: 0 auto;
+        }
+
+        .map-button:active {
+            transform: scale(0.97);
+            background: #5a2c2f;
+        }
+
+        /* ========== КАЛЕНДАРЬ ========== */
+.calendar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 300px;
+    left: 0px;
+}
+
+.calendar {
+    border-radius: 30px;
+    padding: 15px;
+    width: 95%;
+    max-width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.calendar-month {
+    font-size: 14px;
+    font-weight: bold;
+    color: #833C40;
+    margin-bottom: 15px;
+    font-family: 'Lora Regular', serif;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+.day-name {
+    font-size: 12px;
+    color: #A9928F;
+    padding: 5px 0;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date-cell {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #5a3e2b;
+    position: relative;
+}
+
+        /* ВЫДЕЛЕННАЯ ДАТА 30 */
+        .date-cell.highlight {
+            font-weight: bold;
+            color: #ECE3DC;
+            background: #833C40;
+            border-radius: 13px;
+            padding: 8px 0;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* ===== ЗАГЛАВНЫЙ ПЕРВЫЙ ЭКРАН ===== */
+        .one {
+            min-height: calc(var(--vh, 1vh) * 100);
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #ECE3DC;
+            position: relative;
+            margin-bottom: 0;
+            padding: 20px 0 80px 0;
+            box-sizing: border-box;
+        }
+
+        .swipe-hint {
+            position: absolute;
+            bottom: max(20px, env(safe-area-inset-bottom, 20px));
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 14px;
+            color: #833C40;
+            font-family: monospace;
+            opacity: 0.8;
+            animation: bounce 1.5s infinite;
+            pointer-events: none;
+            background: transparent;
+            padding: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+
+        .two, .free, .four, .five {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .six {
+            margin-top: 30px;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        /* ФУТЕР */
+        footer {
+            background: #833C40;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            width: 100%;
+            margin-top: 0 !important;
+        }
+
+        .footer-content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .footer-line {
+            font-size: 0.85rem;
+            color: #a9928f;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-line:first-child {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-line:last-child {
+            font-size: 0.7rem;
+            opacity: 0.8;
+        }
+
+
+
+        /* ========== АНИМАЦИИ ПРИ СКРОЛЛЕ ========== */
+/* Базовое состояние — элементы скрыты */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Состояние когда элемент появился */
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Небольшая задержка для разных элементов (по желанию) */
+.scroll-animate.delay-1 {
+    transition-delay: 0.1s;
+}
+.scroll-animate.delay-2 {
+    transition-delay: 0.2s;
+}
+.scroll-animate.delay-3 {
+    transition-delay: 0.35s;
+}
+.scroll-animate.delay-4 {
+    transition-delay: 0.5s;
+}
+
+/* Альтернативная анимация — появление с масштабом (очень нежно) */
+.scroll-animate.scale {
+    transform: scale(0.95) translateY(20px);
+}
+
+
+/* ========== ДОПОЛНИТЕЛЬНЫЕ МИКРО-ЭФФЕКТЫ ========== */
+
+
+/* Плавное появление футера при скролле */
+footer {
+    opacity: 0;
+    animation: footerFadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes footerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="pc-block">
+        <p>Это приглашение создано для телефона<br>Открой меня на мобильном устройстве</p>
+    </div>
+
+    <div class="mobile-only">
+        <section class="one">
+            <img src="images/цифра.svg" alt="Открытка приглашение" class="img-1-1 scroll-animate">
+            <img src="images/начальная_надпись.svg" alt="" class="img-1-2 scroll-animate">
+            <div class="swipe-hint">↓ листайте вниз ↓</div>
+        </section>
+
+        <section class="two">
+            <img src="images/Дорогие_гости!.svg" alt="" class="img-2-1 scroll-animate">
+            <img src="images/надпись_перед_фото.svg" alt="Алевтина и Михаил" class="img-2-2 scroll-animate">
+            <img src="images/полька.svg" alt="" class="img-2-3 scroll-animate">
+            <img src="images/полосочка.svg" alt="" class="img-2-4 scroll-animate">
+        </section>
+
+        <section class="free">
+            <img src="images/Праздник_состоится.svg" alt="" class="img-3-1 scroll-animate">
+            
+            <div class="calendar-wrapper">
+                <div class="calendar scroll-animate">
+                    <div class="calendar-month">Май</div>
+                    <div class="calendar-days">
+                        <div class="day-name">Пн</div>
+                        <div class="day-name">Вт</div>
+                        <div class="day-name">Ср</div>
+                        <div class="day-name">Чт</div>
+                        <div class="day-name">Пт</div>
+                        <div class="day-name">Сб</div>
+                        <div class="day-name">Вс</div>
+                    </div>
+                    <div class="calendar-dates">
+                        <div class="date-cell"></div> <div class="date-cell"></div> <div class="date-cell"></div> <div class="date-cell"></div>
+                        <div class="date-cell">1</div> <div class="date-cell">2</div> <div class="date-cell">3</div>
+                        <div class="date-cell">4</div> <div class="date-cell">5</div> <div class="date-cell">6</div> <div class="date-cell">7</div>
+                        <div class="date-cell">8</div> <div class="date-cell">9</div> <div class="date-cell">10</div> <div class="date-cell">11</div>
+                        <div class="date-cell">12</div> <div class="date-cell">13</div> <div class="date-cell">14</div> <div class="date-cell">15</div>
+                        <div class="date-cell">16</div> <div class="date-cell">17</div> <div class="date-cell">18</div> <div class="date-cell">19</div>
+                        <div class="date-cell">20</div> <div class="date-cell">21</div> <div class="date-cell">22</div> <div class="date-cell">23</div>
+                        <div class="date-cell">24</div> <div class="date-cell">25</div> <div class="date-cell">26</div> <div class="date-cell">27</div>
+                        <div class="date-cell">28</div> <div class="date-cell">29</div> <div class="date-cell highlight scroll-animate">30</div> <div class="date-cell">31</div>
+                    </div>
+                </div>
+            </div>
+            
+            <img src="images/дата.svg" alt="" class="img-3-3 scroll-animate">
+            <img src="images/цветочек_календарь.svg" alt="" class="img-3-4 scroll-animate">
+        </section>
+
+        <section class="four">
+            <img src="images/Место_проведения.svg" alt="" class="img-4-1 scroll-animate">
+            <img src="images/адрес.svg" alt="" class="img-4-2 scroll-animate">
+            
+            <button class="map-button scroll-animate" onclick="openMap()">Открыть карту</button>
+            
+            <img src="images/цветок_адрес.svg" alt="" class="img-4-4 scroll-animate">
+        </section>
+
+        <section class="five">
+            <img src="images/время.svg" alt="" class="img-5-1 scroll-animate">
+        </section>
+
+        <section class="six">
+            <img src="images/последняя_надпись.svg" alt="" class="img-6-1 scroll-animate">
+            <img src="images/цветок_последний.svg" alt="" class="img-6-2 scroll-animate">
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-line">Поля, 20 лет | 30 мая 2026 (сб) | 14:00</div>
+            <div class="footer-line">design by Polina | 2026</div>
+        </div>
+    </footer>
+
+    <script>
+        function setVh() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        window.addEventListener('resize', setVh);
+        setVh();
+
+        function openMap() {
+    let lat = 56.904551;
+    let lon = 60.568162;
+    let url = `https://yandex.ru/maps/?pt=${lon},${lat}&z=17&l=map`;
+    window.open(url, '_blank');
+}
+    </script>
+<script>
+// ========== ПЛАВНАЯ АНИМАЦИЯ ПРИ СКРОЛЛЕ ==========
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.scroll-animate');
+    
+    if (animatedElements.length === 0) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                // Можно оставить наблюдение или отключить после появления:
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,      // Элемент появится когда 15% его видно
+        rootMargin: '0px 0px -20px 0px'  // Небольшой отступ снизу
+    });
+    
+    animatedElements.forEach(el => observer.observe(el));
+}
+
+// Запускаем когда страница загрузилась
+document.addEventListener('DOMContentLoaded', initScrollAnimations);
+</script>
+
+
+
+
+
+
+</body>
+</html>
